@@ -1,0 +1,94 @@
+tech e1,e2 - digital
+tech e1,e2 - non-digital
+domain e1,e2 -
+agile -e1 good
+winners hackathon/slumdrone/hippos
+
+
+Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
+Go is an amazing choice for a language as it was developed by some of the same individuals who created the C programming language, Unix, and UTF-8 - some of the most influential contributions to computer science. Robert Griesemer, Rob Pike, and Ken Thompson created Go to be a modern language that easily uses multiple cores, easily implements concurrency, easily works in distributed environments, and easily allows the programmer to write programs - it has a very lean and user-friendly syntax.
+
+Go was created by luminaries in computer science at one of the best, if not the very best, software engineering firm to have ever existed - Google.
+
+The credentials of Go are unsurpassed.
+
+But why did Google create a new language?
+
+In Google’s words, “Go was born out of frustration with existing languages and environments for systems programming. Programming had become too difficult and the choice of languages was partly to blame.
+
+ One had to choose either efficient compilation, efficient execution, or ease of programming; all three were not available in the same mainstream language. Programmers who could were choosing ease over safety and efficiency by moving to dynamically typed languages such as Python and JavaScript rather than C++ or, to a lesser extent, Java.
+
+ Go is an attempt to combine the ease of programming of an interpreted, dynamically typed language with the efficiency and safety of a statically typed, compiled language. It also aims to be modern, with support for networked and multicore computing. Finally, working with Go is intended to be fast: it should take at most a few seconds to build a large executable on a single computer. 
+
+To meet these goals required addressing a number of linguistic issues: an expressive but lightweight type system; concurrency and garbage collection; rigid dependency specification; and so on. These cannot be addressed well by libraries or tools; a new language was called for.”
+
+In my opinion, Go is the best programming language that you can be learning today.  Go is also the top-paid programming language in America today.
+=====================================================================================================================
+
+What Is a Token-Based Authentication System?
+The token-based authentication systems allow users to enter their username and password in order to obtain a token which allows them to fetch a specific resource - without entering their username and password at each request. Once their token has been obtained, the user can use the token to access specific resources for a set time period.
+
+JWT (pronounced 'jot') is a token based authentication system. It is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature. The JWT is a self-contained token which has authentication information, expire time information, and other user defined claims digitally signed.
+
+How We Used to Do Authentication:-
+HTTP is a stateless protocol. That means it doesn't store any state from request to response. If you login for one request, you'll be forgotten and will need to login again to make another request. As you can imagine, this can get very annoying, very fast.
+
+The old-school solution was to create what's called a "session." A session is implemented in two parts:
+
+An object stored on the server that remembers if a user is still logged in, a reference to their profile, etc.
+
+A cookie on the client-side that stores some kind of ID that can be referenced on the server against the session object's ID.
+
+This solution still works, but nowadays we have different  requirements, i.e. hybrid application or single page application contacting multiple backends (split up into separate micro-service authetication servers, databases, image processing servers, etc). In these types of scenarios, the session cookie we get from one server won't correspond to another server.
+
+JWTs don't use sessions and have no problem with micro-service architectures. Instead of making a session and setting a cookie, the server will send you a JSON Web Token instead. Now you can use that token to do whatever you want to do with the server (that you have authorization to do).
+
+Think of it like a hotel key: you register at the front-desk, and they give you one of those plastic electronic keys with which you can access your room, the pool, and the garage, but you can't open other people's rooms or go into the manager's office. And, like a hotel key, when your stay has ended, you're simply left with a useless piece of plastic (i.e., the token doesn't do anything anymore after it's expired).
+
+advantages of JWTs:
+____________________
+No Session to Manage (stateless): The JWT is a self contained token which has authetication  information, expire time information, and other user defined claims digitally signed.
+
+Portable: A single token can be used with multiple backends.
+
+No Cookies Required, So It's Very Mobile Friendly
+
+Good Performance: It reduces the network round trip time.
+
+Decoupled/Decentralized: The token can be generated anywhere. Authentication can happen on the resource server, or easily separated into its own server.
+
+=========================================================================================================================
+
+Protocol Buffer:
+-----------------
+
+Data serialization is the process of converting structured data to a format that allows sharing or storage of the data in a form that allows recovery of its original structure. Data De-serialization is the exact opposite.
+Various Data Serialization formats include XML, CSV, YAML, JSON, Protobuf etc.
+
+Protocol buffers, usually referred as Protobuf, is a protocol developed by Google to allow serialization and deserialization of structured data. Google developed it with the goal to provide a better way, compared to XML, to make systems communicate. So they focused on making it simpler, smaller, faster and more maintainable then XML. But, as you will see in this article, this protocol even surpassed JSON with better performance, better maintainability and smaller size.
+
+
+
+How Does it Differs from JSON?
+It is important to note that, although JSON and Protobuf messages can be used interchangeably, these technologies were designed with different goals. JSON, which stands for JavaScript Object Notation, is simply a message format that arose from a subset of the JavaScript programming language. JSON messages are exchanged in text format and, nowadays, they are completely independent and supported by, virtually, all programming languages.
+
+Protobuf, on the other hand, is more than a message format, it is also a set of rules and tools to define and exchange these messages. Google, the creator of this protocol, has made it open source and provides tools to generate code for the most used programming languages around, like JavaScript, Java, PHP, C#, Ruby, Objective C, Python, C++ and Go. Besides that, Protobuf has more data types than JSON, like enumerates and methods, and is also heavily used on RPCs (Remote Procedure Calls).
+
+Is Protobuf Really Faster than JSON?
+There are several resources online that show that Protobuf performs better than JSON, XML and etc
+
+======================================================================================================
+gRPC
+Overview
+gRPC is a modern open source high performance RPC framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking and authentication. It is also applicable in last mile of distributed computing to connect devices, mobile applications and browsers to backend services.
+
+
+In gRPC, a client application can directly call a method on a server application on a different machine as if it were a local object, making it easier for you to create distributed applications and services. As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. On the server side, the server implements this interface and runs a gRPC server to handle client calls. On the client side, the client has a stub (referred to as just a client in some languages) that provides the same methods as the server.
+
+gRPC clients and servers can run and talk to each other in a variety of environments - from servers inside Google to your own desktop - and can be written in any of gRPC’s supported languages. So, for example, you can easily create a gRPC server in Java with clients in Go, Python, or Ruby. In addition, the latest Google APIs will have gRPC versions of their interfaces, letting you easily build Google functionality into your applications.
+
+By default, gRPC uses Protocol Buffers, Google’s mature open source mechanism for serializing structured data (although it can be used with other data formats such as JSON)
+
+gRPC uses protoc with a special gRPC plugin to generate code from your proto file: you get generated gRPC client and server code, as well as the regular protocol buffer code for populating, serializing, and retrieving your message types. 
+
